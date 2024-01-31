@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+.wrapper {
+    padding: 30px;
+}
+.accordion .accordion_wrap:not(:first-child) {
+    padding-top: 20px
+}
+.accordion {
+    background-color: rgb(128 128 128 / 10%);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #000;
+}
+.title {
+    position: relative;
+    cursor: pointer;
+    font: 600 18px/1 sans-serif;
+    background-color: rgb(128 128 128 / 30%);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.desc {
+    padding-top: 10px;
+}
+.desc_wrap {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s;
+}
+.title:before, .title:after {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.title:before {
+    right: 8px;
+    width: 16px;
+    height: 2px;
+}
+.title:after {
+    right: 16px;
+    width: 2px;
+    height: 16px;
+}
+.accordion_wrap.active .title:after {
+    display: none;
+}
